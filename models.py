@@ -23,3 +23,8 @@ class Expense(Base):
         ForeignKey("categories.id"),
         nullable=False
     )
+    transaction_type: Mapped[str] = mapped_column(
+        String(10),
+        nullable=False,
+        default="expense"
+    )
